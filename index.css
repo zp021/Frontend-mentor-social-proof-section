@@ -21,6 +21,9 @@
 
 body {
     background-color: var(--clr-background);
+    background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
     font-family: "League Spartan", sans-serif;
     font-size: 15px;
     min-height: calc(100vh - 1px);
@@ -51,7 +54,7 @@ body {
     height: 5rem;
     padding: 1rem 0;
     margin-bottom: 1rem;
-    background-color: hsl(300, 43%, 22%, 0.1);
+    background-color: hsl(303, 10%, 53%, 0.2);
     border-radius: 0.5rem;
 }
 
@@ -115,10 +118,15 @@ body {
 
 @media (min-width: 765px) {
 
-    main {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-    
+    body {
+        background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        background-position: top left, bottom right;
+        background-repeat: no-repeat;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
     }
 
     .headline {
@@ -158,6 +166,10 @@ body {
 
     .rating:nth-child(3) {
         transform: translateX(6rem);
+    }
+
+    .ratings {
+        margin-left: 1.5rem;
     }
 
     .review {
